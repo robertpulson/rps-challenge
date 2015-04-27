@@ -24,7 +24,7 @@ class RockPaperScissors < Sinatra::Base
   end
 
   post('/play') do
-    player.name_player(params[:player_name].capitalize.to_s)
+    player.name_player(params[:player_name])
     @player = game.player1
     @choices = game.results.keys
     erb :play_game

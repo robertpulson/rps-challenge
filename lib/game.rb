@@ -1,6 +1,6 @@
 class Game
 
-  attr_accessor :results, :choice, :player1, :player2
+  attr_accessor :results, :player1, :player2
 
   def initialize
     @results = { :Rock     => [:Scissors, :Lizard],
@@ -8,12 +8,10 @@ class Game
                  :Scissors => [:Paper, :Lizard],
                  :Lizard   => [:Spock, :Paper],
                  :Spock    => [:Scissors, :Rock] }
-    @player1
-    @player2
   end
 
-  def generate_choice
-    player2.choose(results.keys.sample)
+  def generate_choice_for(player)
+    player.choose(results.keys.sample)
   end
 
   def play
@@ -27,11 +25,7 @@ class Game
   end
 
   def add(new_player)
-    if player1 != nil
-      @player2 = new_player
-    else
-      @player1 = new_player
-    end
+    player1 ? @player2 = new_player : @player1 = new_player
   end
 
 end

@@ -20,12 +20,12 @@ describe Game do
     expect(game.play).to eq('Its a Tie')
   end
 
-  it 'knows when a player wins' do
+  it 'knows when Player 1 wins' do
     play_with(:Paper)
     expect(game.play).to eq('Player 1 Wins')
   end
 
-  it 'knows when the player loses' do
+  it 'knows when Player 2 wins' do
     play_with(:Rock)
     expect(game.play).to eq('Player 2 Wins')
   end
@@ -42,12 +42,12 @@ describe Game do
     expect(game.player2).to eq(player2)
   end
 
-  it 'can assign a random choice to player2' do
+  it 'can assign a random choice for a player' do
     game.add(player)
     player2 = double :player2
     game.add(player2)
     allow(player2).to receive(:choose).and_return(:Scissors)
-    game.generate_choice
+    game.generate_choice_for(player2)
   end
 
 end

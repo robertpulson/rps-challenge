@@ -4,10 +4,6 @@ describe Player do
 
   let (:player) { Player.new }
 
-  it 'can have a name' do
-    expect(player).to respond_to(:name)
-  end
-
   it 'can be given a name' do
     player.name_player('Phil')
     expect(player.name).to eq('Phil')

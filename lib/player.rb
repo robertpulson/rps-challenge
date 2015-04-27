@@ -1,14 +1,9 @@
 class Player
 
-  attr_reader :name, :choice
-
-  def initialize
-    @name = name
-    @choice
-  end
+  attr_accessor :name, :choice
 
   def name_player(name)
-    @name = name
+    @name = name.capitalize
   end
 
   def choose(choice)
