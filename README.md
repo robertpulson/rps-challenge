@@ -36,7 +36,7 @@ I was able to code a solution which allowed one player to play this game. The pl
 
 # Getting Started
 
-The app has been deployed to (heroku)[http://rockypaperyskissors.herokuapp.com]
+The app has been deployed to [heroku](http://rockypaperyskissors.herokuapp.com)
 
 However if you would prefer to run it locally, clone the repository with:
 
